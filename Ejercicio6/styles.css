@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Josefin+Sans:wght@300;400;600&family=Kumbh+Sans:wght@400;500&family=Lexend+Deca&family=Outfit:wght@300;400;600&family=Poppins:wght@400;500;600;700&display=swap');
+:root{
+    --desaturated-Red : hsl(0, 36%, 70%);
+    --soft-red : hsl(0, 93%, 68%);
+    --Dark-Grayish-Red : hsl(0, 6%, 24%);
+
+    --gradient-1 : 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+    --gradient-2 : 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+}
+html{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Josefin Sans',sans-serif;
+    min-height: 100vh;
+    background-color: #fff;
+    display: grid;
+    margin: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 40% 1fr;
+    grid-template-areas: 
+        "logo"
+        "hero-image"
+        "main"
+    ;
+}
+@media screen and (min-width:1024px) {
+    body{
+        grid-template-columns: 65% 1fr;
+        grid-template-rows: 150px 1fr;
+        grid-template-areas: 
+        "logo   hero-image"
+        "main   hero-image"
+    ;
+    }
+}
+.logo{
+    grid-area: logo;
+}
+.logo__content{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: auto;
+}
+@media screen  and (min-width:1024px){
+    .logo__content{
+        width: 70%;
+        margin: 0 auto;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+}
+.logo__img{
+    background-image: url(./images/logo.svg);
+    background-size: cover;
+    width: 60%;
+    height: 50%;
+}
+.hero-image{
+    grid-area: hero-image;
+}
+.hero-image img,
+.hero-image source {
+    width: 100%;
+    height: 100%;
+}
+.hero-image__content{
+    width: 100%;
+    height: 100%;
+}
+.main{
+    grid-area: main;
+}
+
+.main__content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+@media screen and (min-width:1024px){
+    .main__content{
+        width: 70%;
+        margin: 0 auto;
+        text-align: start;
+    }
+}
+.main__title{
+    font-size: 70px;
+    font-weight: 400;
+    align-self: center;
+    justify-self: center;
+    margin-top: 30px;
+    letter-spacing: 5px;
+    line-height: 50px;
+}
+@media screen and (min-width:1024px){
+    .main__title{
+        font-size: 120px;
+        font-weight: 400;   
+        letter-spacing: 5px;
+        line-height: 90px;
+        align-self: flex-start;
+        justify-self: flex-start;
+    }
+}
+.main__title span{
+    font-weight: 300;
+    color: var(--desaturated-Red);
+}
+.main__paragraph{
+    font-size: 18px;
+    margin-top: 40px;
+    padding: 0 50px;
+    color: var(--desaturated-Red);
+}
+@media screen and (min-width:1024px){
+    .main__paragraph{
+        padding: 0;
+        align-self: flex-start;
+        justify-self: flex-start;
+        font-size: 36px;
+        height: 20%;
+    }
+}
+.main__form{
+    margin-top: 50px;
+    height: 90px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+}
+form{
+    height: 100%;
+    width: 100%;
+}
+.form-content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (min-width:1024px){
+    .form-content{
+        justify-content: start;
+    }
+}
+.form-content input[type="text"]{
+    border-radius: 20px;
+    border: thin solid var(--desaturated-Red);
+    width: 75%;
+    padding-left: 10px;
+    
+}
+.form-content--active input[type="text"]{
+    border: medium solid var(--soft-red);  
+}
+
+@media screen and (min-width:1024px){
+    .form-content input[type="text"]{
+        font-size: 18px;
+        width: 60%;
+    }
+}
+.form-content input[type="text"]:focus{
+    outline: none;
+}
+.form-content input{
+    height: 100%;
+}
+.btn{
+    position: absolute;
+    border: none;
+    height: 100%;
+    width: 17%;
+    border-radius: 30px;
+    background-color: var(--soft-red);
+    box-shadow: linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    left: 88%;
+    transform: translateX(-88%);
+    cursor: pointer;
+    
+}
+@media screen and (min-width:1024px){
+    .btn{
+        left: 60%;
+        width: 12%;
+        
+    }
+}
+.form-content__error{
+    position: absolute;
+    left: 68%;
+    transform: translateX(-68%);
+    width: 25px;
+    height: 25px;
+    fill: red;
+    background-image: url(./images/icon-error.svg);
+    opacity: 0;
+}
+.form-content__error--active{
+    position: absolute;
+    background-image: url(./images/icon-error.svg);
+    opacity: 1;
+    left: 68%;
+    transform: translateX(-68%);
+    width: 25px;
+    height: 25px;
+    animation: fade .1s linear 10 alternate;
+}
+@keyframes fade{
+    0%{
+        left: 68%;
+        transform: translateX(-68%);
+    }
+    100%{
+        left: 67%;
+        transform: translateX(-67%);
+    }
+}
+@media screen and (min-width:1024px){
+    .form-content__error--active{
+        position: absolute;
+        background-image: url(./images/icon-error.svg);
+        left: 45%;
+        opacity: 1;
+        animation: fade .1s linear 10 alternate;
+    }
+    
+    @keyframes fade {
+    0%{
+        left: 45%;
+        transform: translateX(-44%);
+    }
+    100%{
+        left: 44%;
+        transform: translateX(-44%);
+    }
+    }
+}
+.btn-submit{
+    fill: #fff;
+    display: block;
+    width: 12px;
+    height: 20px;
+    background-image: url('./images/icon-arrow.svg');
+    background-color: linear-gradient(135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%));
+}
+.error-massage{
+    text-align: center;
+    margin-top: 25px;
+    font-size: 16px;
+    color: var(--soft-red);
+    opacity: 0;
+}
+.error-massage--active{
+    opacity: 1;
+}
+@media screen  and (min-width:1024px){
+    .error-massage{
+        text-align: start;
+        margin-top: 25px;
+        margin-left: 10px;
+        font-size: 18px;
+        color: var(--soft-red);
+    }
+}

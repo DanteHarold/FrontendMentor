@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="logo">
+    <div class="logo__content">
+      <div class="logo__img"></div>
+    </div>
+  </div>
+  <div class="hero-image">
+    <picture class="hero-image__content">
+      <source srcset="./images/hero-desktop.jpg" media="(min-width:1024px)">
+      <img src="./images/hero-mobile.jpg" alt="cat" >
+    </picture>
+
+    <!-- <img src="./images/hero-mobile.jpg" alt="hero-image" class="hero-image__content"> -->
+  </div>
+  <main class="main">
+    <div class="main__content">
+      <div class="main__title">
+          <p>
+            <span>
+              We're <br>
+            </span>
+            coming <br>
+            soon
+          </p>
+        </div>
+        <div class="main__paragraph">
+          <p>Hello fellow shoppers! We're currently building our new fashion store. 
+            Add your email below to stay up-to-date with announcements and our launch deals.</p>
+        </div>
+        <div class="main__form">
+            <form action="#" id="form">
+                <div class="form-content" id="form__content">
+                  <input type="text" name="" class="" id="email" placeholder="Email Address">
+                <div class="form-content__error" id="form-content__error"></div>
+                  <button type="submit" class="btn">
+                    <div class="btn-submit"></div>
+                  </button>
+                </div>
+            </form>
+            <p class="error-massage" id="error-message">Please previde a valid email</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+
+  
+  
+  <!-- <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer> -->
+
+  <script src="scripts.js"></script>
+</body>
+</html>

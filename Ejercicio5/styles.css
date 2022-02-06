@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Kumbh+Sans:wght@400;500&family=Lexend+Deca&family=Outfit:wght@300;400;600&family=Poppins:wght@400;500;600;700&display=swap');
+:root{
+    --red-color : hsl(0, 100%, 74%) ;
+    --green-color : hsl(154, 59%, 51%);
+    --blue-color : hsl(248, 32%, 49%);
+    --dark-blue : hsl(249, 10%, 26%) ;
+    --gray-blue : hsl(246, 25%, 77%);
+}
+body{
+    font-size: 16px;
+    font-family: 'Poppins',sans-serif;
+    background-color: var(--red-color);
+}
+.container{
+    position: relative;
+    min-height: 100vh;
+    margin: 50px 10px;
+}
+@media screen and (min-width:350px) {
+    .container{    
+       margin: auto;
+       width: 80%;
+       height: 80%;
+    }
+}
+@media screen and (min-width : 1440px){
+    .container{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-template-rows: 200px 1fr;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+    .container__header{
+        grid-column: 1/2;
+        grid-row: 1/-1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .container__card{
+        grid-column: 2/-1;
+        grid-row: 1/2;
+    }
+    .container__form{
+        grid-column: 2/-1;
+        grid-row: 2/-1;
+    }
+
+}
+.container__header{
+    text-align: center;
+    color: #fff;
+    padding: 0 10px;
+    height: 40%;
+}
+@media screen and (min-width:1440px) {
+    .container__header{
+        height: 100%;
+    }
+    .container__title{
+        text-align: start;
+        font-size: 32px;
+        font-weight: 700;
+        padding-left: 100px;
+        margin: 0;
+    }
+    .container__title h2 {
+        margin: 0;
+    }
+   
+}
+.container__paragraph{
+    font-weight: 400;
+}
+@media screen and (min-width:720px) {
+    .container__paragraph{    
+        margin: auto;
+       width: 60%;
+    }
+}
+@media screen and (min-width:1440px) {
+    .container__paragraph{
+        text-align: start;
+        font-size: 18px;
+        font-weight: 700;
+        padding-left: 100px;
+        margin: 0;
+    }
+}
+.container__card{
+    color: #fff;
+    text-align: center;
+    border-radius: 15px;
+    background-color: var(--blue-color);
+    margin: 0 5px;
+    margin-top: 30px;
+    height: 12%;
+}
+@media screen and (min-width:720px) {
+    .container__card{    
+        margin: auto;
+       width: 60%;
+    }
+}
+@media screen and (min-width:1440px) {
+    .container__card{
+        height: 25%;
+        width: 60%;
+        margin-right: auto;
+        margin-top: auto;
+        margin-left: 0;
+        margin-bottom: 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.container__card span{
+    color: var(--gray-blue);
+}
+.card-text{
+    padding: 10px 0px;
+}
+.container__form{
+    position: absolute;
+    height: 45%;
+    bottom: 0;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 15px 0;
+}
+@media screen and (min-width:720px) {
+    .container__form{    
+        left: 50%;
+        transform: translate(-50%);
+        height: 60%;
+        width: 60%;
+        margin-bottom: auto;
+    }
+}
+@media screen and (min-width:1440px) {
+    .container__form{
+        position: relative;  
+        left: 0%;    
+        transform: translate(-0%);
+        height: 65%;
+        width: 60%;
+        margin-bottom: auto;
+    }
+}
+
+form{
+    height: 100%;
+}
+@media screen and (min-width:1440px) {
+
+}
+.form-inputs{
+    overflow: hidden;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+@media screen and (min-width:1440px) {
+    .form-inputs{
+        height: 90%;
+    }
+}
+.form-inputs input:focus{
+    outline: none;
+}
+.form-inputs input{
+    margin: 0 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+@media screen and (min-width:1440px){
+    .form-inputs input{
+        margin: 0 30px;
+        padding: 10px 15px;
+        border-radius: 5px;
+    }
+}
+.form-inputs input[type="submit"]{
+    color: #fff;
+    padding: 12px 0;
+    font-size: 18px;
+    background-color: var(--green-color);
+
+}
+.form-terms{
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    padding: 0 40px;
+    height: 20%;
+}
+@media screen and (min-width:1440px) {
+    .form-terms{
+        font-size: 11px;
+        height: 10%;
+        padding: 0 25px;
+    }
+}
+.form-terms span{
+    color: var(--red-color);
+}
