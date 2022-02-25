@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+:root{
+    --moderate-violet : hsl(263, 55%, 52%);
+    --very-dark-grayBlue : hsl(217, 19%, 35%);
+    --very-dark-blackBlue : hsl(219, 29%, 14%);
+    --white : hsl(0, 0%, 100%);
+
+    --text-light-gray : hsl(0, 0%, 81%);
+    --text-very-light-gray : hsl(0, 0%, 60%);
+    --text-gray-blue : hsl(210, 46%, 95%);
+    --font: "Barlow Semi Condensed", sans-serif;
+    --max-width: 1200px;
+}
+html{
+    box-sizing: border-box;
+    font-family: var(--font);
+    font-size: 16px;
+}
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+body{
+    background-color: var(--text-gray-blue);
+}
+
+.cards{
+    /* border: thin solid red; */
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+.card:nth-child(1){
+    grid-area: daniel;
+}
+.card:nth-child(2){
+    grid-area: jonatan;
+}
+.card:nth-child(3){
+    grid-area: jeanete;
+}
+.card:nth-child(4){
+    grid-area: patrick;
+}
+.card:nth-child(5){
+    grid-area: kira;
+}
+@media screen  and (min-width:1024px){
+    .cards{
+        display: grid;
+        grid-template-columns: 24% 24% 24% 24%;
+        grid-template-areas: 
+            "daniel daniel jonatan kira"
+            "jeanete patrick patrick kira"
+        ;
+        justify-content: space-around;
+        align-content: center;
+    }
+}
+.card{
+    /* border: thick solid rgb(0, 0, 0); */
+    border-radius: 15px;
+    margin-top: 1.5rem;
+    margin: 2.5rem 1rem 0;
+    padding: 1.5rem;
+}
+
+.card__header{
+    /* border: 2px solid red; */
+    display: flex;
+}
+.card img{
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+}
+.card__info{
+    /* border: thin solid white; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: .5rem;
+    margin-right: auto;
+}
+.card__info .card__name{
+    color: var(--text-light-gray);
+}
+.card__info .card__verified{
+    font-size: 13px;
+    color: var(--text-very-light-gray);
+}
+.card__title{
+    /* border: thin solid red; */
+    margin: .8rem 0;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--text-gray-blue);
+}
+.card__paragraph{
+    /* border: thin solid black; */
+    margin: 0.8rem 0;
+    color: var(--text-very-light-gray);
+}
+.card:first-child{
+    background-color: var(--moderate-violet);
+}
+.card:nth-child(2){
+    background-color: var(--very-dark-grayBlue);
+}
+.card:nth-child(4){
+    background-color: var(--very-dark-blackBlue);
+}
+.card:nth-child(3),
+.card:nth-child(5){
+    background-color: var(--white);
+}
+.card:nth-child(3) .card__title,
+.card:nth-child(5) .card__title{
+    color: var(--very-dark-grayBlueBlue);
+}
+.card:last-child{
+    margin-bottom: 2.5rem;
+}
+@media screen and (min-width:1024px) {
+    .card:nth-child(3) ,
+    .card:nth-child(4) {
+        margin-bottom: 2.5rem;
+    }
+}
